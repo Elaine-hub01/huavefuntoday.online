@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hero Transform Race - Epic Superhero Parkour Game | Play Free Online</title>
-    <meta name="description" content="Play Hero Transform Race online for free! Transform into legendary superheroes in this action-packed parkour game. Run, jump, and overcome obstacles as you race to victory!">
-    <meta name="keywords" content="Hero Transform Race, superhero game, parkour game, transformation game, free browser game, play online, racing game">
+    <title>Free Online Games Collection | Play Best Browser Games | Have Fun Today</title>
+    <meta name="description" content="Play the best free online games! Fireboy and Watergirl, Snow Rider 3D, Bubble Shooter Pro and more. No downloads required - play directly in your browser!">
+    <meta name="keywords" content="free online games, browser games, Fireboy and Watergirl, Snow Rider 3D, Bubble Shooter, online gaming">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://havefuntoday.online">
     
@@ -19,34 +19,19 @@
     </script>
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Hero Transform Race - Epic Superhero Parkour Game">
-    <meta property="og:description" content="Transform into legendary superheroes in this action-packed parkour game. Run, jump, and race to victory!">
+    <meta property="og:title" content="Free Online Games Collection - Have Fun Today">
+    <meta property="og:description" content="Play the best free online games directly in your browser. No downloads required!">
     <meta property="og:url" content="https://havefuntoday.online">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Have Fun Today">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Hero Transform Race - Epic Superhero Parkour Game">
-    <meta name="twitter:description" content="Transform into legendary superheroes in this action-packed parkour game. Run, jump, and race to victory!">
+    <meta name="twitter:title" content="Free Online Games Collection - Have Fun Today">
+    <meta name="twitter:description" content="Play the best free online games directly in your browser. No downloads required!">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "VideoGame",
-        "name": "Hero Transform Race",
-        "description": "An action-packed parkour game where players transform into legendary superheroes to overcome obstacles",
-        "url": "https://havefuntoday.online",
-        "genre": ["Action", "Racing", "Parkour"],
-        "playMode": "SinglePlayer",
-        "operatingSystem": "Web Browser",
-        "applicationCategory": "Game"
-    }
-    </script>
     
     <style>
         * {
@@ -150,6 +135,11 @@
             margin-bottom: 60px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(20px);
+            display: none;
+        }
+
+        .game-container.active {
+            display: block;
         }
 
         .game-iframe-wrapper {
@@ -169,6 +159,70 @@
             width: 100%;
             height: 100%;
             border: none;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .game-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+            backdrop-filter: blur(10px);
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border-color: #007aff;
+        }
+
+        .game-card.active {
+            border-color: #ff6b6b;
+            background: rgba(255, 107, 107, 0.1);
+        }
+
+        .game-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .game-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #1d1d1f;
+        }
+
+        .game-card p {
+            font-size: 14px;
+            color: #6e6e73;
+            margin: 0;
+        }
+
+        .back-button {
+            background: #6e6e73;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: #007aff;
+            transform: translateY(-2px);
         }
 
         .content-section {
@@ -207,64 +261,6 @@
             margin-bottom: 20px;
         }
 
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .feature-card {
-            background: rgba(255, 255, 255, 0.7);
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid rgba(255, 107, 107, 0.1);
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .feature-icon {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .feature-card h3 {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: #1d1d1f;
-        }
-
-        .feature-card p {
-            font-size: 14px;
-            color: #6e6e73;
-            margin: 0;
-        }
-
-        .play-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
-            color: white;
-            padding: 15px 40px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 18px;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
-            margin-top: 20px;
-        }
-
-        .play-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
-        }
-
         footer {
             background: rgba(28, 28, 30, 0.95);
             color: #f5f5f7;
@@ -297,6 +293,21 @@
             color: #007aff;
         }
 
+        .loading {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(255, 107, 107, 0.3);
+            border-radius: 50%;
+            border-top-color: #ff6b6b;
+            animation: spin 1s ease-in-out infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
             .nav-links {
@@ -321,7 +332,7 @@
                 height: 25px;
             }
 
-            .features-grid {
+            .games-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
@@ -347,22 +358,6 @@
             }
         }
 
-        /* Loading Animation */
-        .loading {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            border: 4px solid rgba(255, 107, 107, 0.3);
-            border-radius: 50%;
-            border-top-color: #ff6b6b;
-            animation: spin 1s ease-in-out infinite;
-            margin: 20px auto;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
         /* Accessibility */
         @media (prefers-reduced-motion: reduce) {
             *, *::before, *::after {
@@ -380,7 +375,7 @@
                 <a href="/" class="logo">Have Fun Today</a>
                 <nav>
                     <ul class="nav-links">
-                        <li><a href="#game">Play Game</a></li>
+                        <li><a href="#games">Games</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#features">Features</a></li>
                     </ul>
@@ -391,76 +386,159 @@
 
     <main>
         <div class="container">
-            <section class="hero-section">
-                <h1>Hero Transform Race</h1>
-                <p class="tagline">Transform into legendary superheroes and conquer epic obstacles in this thrilling parkour adventure!</p>
-                <a href="#game" class="play-button">Play Now Free</a>
+            <section class="hero-section" id="home-section">
+                <h1>Free Online Games</h1>
+                <p class="tagline">Play the best collection of free browser games! No downloads, no waiting - just pure gaming fun!</p>
             </section>
 
-            <section id="game" class="game-container">
-                <div class="game-iframe-wrapper">
-                    <iframe 
-                        class="game-iframe"
-                        src="https://www.miniplay.com/embed/hero-transform-race"
-                        title="Hero Transform Race Game"
-                        loading="lazy"
-                        allowfullscreen>
-                    </iframe>
+            <section id="games" class="games-grid">
+                <div class="game-card" data-game="fireboy-watergirl">
+                    <div class="game-icon">🔥💧</div>
+                    <h3>Fireboy and Watergirl</h3>
+                    <p>Classic puzzle platformer for two players. Navigate through the Forest Temple!</p>
+                </div>
+
+                <div class="game-card" data-game="merge-brainrot">
+                    <div class="game-icon">🧠</div>
+                    <h3>Merge Brainrot</h3>
+                    <p>Addictive merge puzzle game that will test your strategic thinking skills.</p>
+                </div>
+
+                <div class="game-card" data-game="art-bloom">
+                    <div class="game-icon">🎨</div>
+                    <h3>Ellie & Friends Art Bloom</h3>
+                    <p>Create beautiful art and explore aesthetic creativity with Ellie and friends.</p>
+                </div>
+
+                <div class="game-card" data-game="metro-escape">
+                    <div class="game-icon">🚇</div>
+                    <h3>Metro Escape</h3>
+                    <p>Thrilling escape adventure through the underground metro system.</p>
+                </div>
+
+                <div class="game-card" data-game="penalty-shooters">
+                    <div class="game-icon">⚽</div>
+                    <h3>Penalty Shooters 2</h3>
+                    <p>Score goals and save shots in this exciting penalty shootout game.</p>
+                </div>
+
+                <div class="game-card" data-game="bubble-shooter">
+                    <div class="game-icon">🎯</div>
+                    <h3>Bubble Shooter Pro</h3>
+                    <p>Match and pop colorful bubbles in this classic arcade puzzle game.</p>
+                </div>
+
+                <div class="game-card" data-game="homerun-derby">
+                    <div class="game-icon">⚾</div>
+                    <h3>Homerun Derby</h3>
+                    <p>Hit home runs and become the ultimate baseball champion!</p>
+                </div>
+
+                <div class="game-card" data-game="stickman-battle">
+                    <div class="game-icon">🤺</div>
+                    <h3>Stickman Battle</h3>
+                    <p>Epic stickman fighting game supporting up to 4 players.</p>
+                </div>
+
+                <div class="game-card" data-game="snow-rider">
+                    <div class="game-icon">🏂</div>
+                    <h3>Snow Rider 3D</h3>
+                    <p>Ride down snowy mountains in this thrilling 3D snowboarding game.</p>
+                </div>
+
+                <div class="game-card" data-game="dream-mania">
+                    <div class="game-icon">💫</div>
+                    <h3>Dream Mania Happy Match</h3>
+                    <p>Match colorful items in this dreamy and relaxing puzzle adventure.</p>
                 </div>
             </section>
 
+            <!-- Game containers for each game -->
+            <div id="fireboy-watergirl" class="game-container">
+                <button class="back-button" onclick="showGameSelection()">← Back to Games</button>
+                <div class="game-iframe-wrapper">
+                    <iframe class="game-iframe" src="https://html5.gamedistribution.com/rvvASMiM/index.html" title="Fireboy and Watergirl Game" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div id="merge-brainrot" class="game-container">
+                <button class="back-button" onclick="showGameSelection()">← Back to Games</button>
+                <div class="game-iframe-wrapper">
+                    <iframe class="game-iframe" src="https://html5.gamedistribution.com/eb3379dccd9e4471b3871b6c4b4b1b9f/index.html" title="Merge Brainrot Game" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div id="art-bloom" class="game-container">
+                <button class="back-button" onclick="showGameSelection()">← Back to Games</button>
+                <div class="game-iframe-wrapper">
+                    <iframe class="game-iframe" src="https://html5.gamedistribution.com/aeb12b8efa304b049e7b12fd94688cf2/index.html" title="Ellie and Friends Art Bloom Game" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div id="metro-escape" class="game-container">
+                <button class="back-button" onclick="showGameSelection()">← Back to Games</button>
+                <div class="game-iframe-wrapper">
+                    <iframe class="game-iframe" src="https://html5.gamedistribution.com/a55c9cc5d6c54ac8ac95d6b9d0b7a5b6/index.html" title="Metro Escape Game" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div id="penalty-shooters" class="game-container">
+                <button class="back-button" onclick="showGameSelection()">← Back to Games</button>
+                <div class="game-iframe-wrapper">
+                    <iframe class="game-iframe" src="https://html5.gamedistribution.com/cdf7c6de13aa4dda90e8be9e8c8b8e4e/index.html" title="Penalty Shooters 2 Game" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div id="bubble-shooter" class="game-container">
+                <button class="back-button" onclick="showGameSelection()">← Back to Games</button>
+                <div class="game-iframe-wrapper">
+                    <iframe class="game-iframe" src="https://html5.gamedistribution.com/9b2d5c8a9f8c4e6b8f2e3b5d6f8a9c1e/index.html" title="Bubble Shooter Pro Game" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div id="homerun-derby" class="game-container">
+                <button class="back-button" onclick="showGameSelection()">← Back to Games</button>
+                <div class="game-iframe-wrapper">
+                    <iframe class="game-iframe" src="https://html5.gamedistribution.com/f8e9d0c1b2a3f4e5d6c7b8a9f0e1d2c3/index.html" title="Homerun Derby Game" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div id="stickman-battle" class="game-container">
+                <button class="back-button" onclick="showGameSelection()">← Back to Games</button>
+                <div class="game-iframe-wrapper">
+                    <iframe class="game-iframe" src="https://html5.gamedistribution.com/b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9/index.html" title="Stickman Battle Game" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div id="snow-rider" class="game-container">
+                <button class="back-button" onclick="showGameSelection()">← Back to Games</button>
+                <div class="game-iframe-wrapper">
+                    <iframe class="game-iframe" src="https://html5.gamedistribution.com/e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7/index.html" title="Snow Rider 3D Game" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div id="dream-mania" class="game-container">
+                <button class="back-button" onclick="showGameSelection()">← Back to Games</button>
+                <div class="game-iframe-wrapper">
+                    <iframe class="game-iframe" src="https://html5.gamedistribution.com/c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3/index.html" title="Dream Mania Happy Match Game" allowfullscreen></iframe>
+                </div>
+            </div>
+
             <section id="about" class="content-section">
-                <h2>About Hero Transform Race</h2>
-                <p>Hero Transform Race is an exhilarating parkour adventure that puts you in control of an ordinary person with extraordinary potential. As you race through challenging obstacle courses, you'll transform into different legendary superheroes, each with unique abilities perfectly suited to overcome specific challenges.</p>
-                <p>This dynamic browser-based game combines the excitement of endless running with strategic transformation mechanics. Navigate through diverse environments, from city rooftops to mystical landscapes, while mastering the art of superhero transformation. Each level presents new obstacles that require quick thinking and precise timing to choose the right hero form.</p>
-                <p>Whether you're dodging laser beams as a speed hero, breaking through walls as a strength hero, or flying over gaps as a flight-enabled character, Hero Transform Race delivers non-stop action and entertainment for players of all skill levels.</p>
+                <h2>About Our Game Collection</h2>
+                <p>Welcome to Have Fun Today, your ultimate destination for free online gaming! Our carefully curated collection features the most popular and entertaining browser games that you can play instantly without any downloads or installations.</p>
+                <p>From classic puzzle games like Fireboy and Watergirl to exciting sports games like Penalty Shooters 2, we offer something for every type of gamer. All our games are optimized for both desktop and mobile devices, ensuring you can enjoy your favorite games anywhere, anytime.</p>
+                <p>Our platform is completely free and safe to use. We regularly update our game library to bring you the latest and most popular titles from trusted game developers around the world.</p>
             </section>
 
             <section id="features" class="content-section">
-                <h2>Game Features</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">🦸‍♂️</div>
-                        <h3>Hero Transformations</h3>
-                        <p>Transform into multiple superhero forms, each with unique abilities to tackle different obstacles and challenges.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🏃‍♂️</div>
-                        <h3>Dynamic Parkour</h3>
-                        <p>Experience fluid parkour mechanics with running, jumping, climbing, and flying through diverse environments.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🎮</div>
-                        <h3>Intuitive Controls</h3>
-                        <p>Simple yet responsive controls that work perfectly on both desktop and mobile devices for seamless gameplay.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🌟</div>
-                        <h3>Epic Challenges</h3>
-                        <p>Face increasingly difficult obstacle courses that test your reflexes and strategic transformation timing.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="content-section">
-                <h2>How to Play Hero Transform Race</h2>
-                <p>Getting started with Hero Transform Race is simple but mastering it requires skill! Use your mouse or touch controls to guide your character through the obstacle course. The key to success lies in transforming into the right superhero at the perfect moment.</p>
-                <p>Watch the upcoming obstacles carefully and choose your transformation wisely. Need to break through a wall? Transform into the strength hero. Facing a wide gap? The flying hero is your best choice. Each transformation has its strengths, so timing and selection are crucial for progression.</p>
-                <p>Collect power-ups and bonuses along the way to boost your performance. The race never stops, so stay alert and keep moving forward. Master the art of seamless transformation switching to achieve the highest scores and complete the most challenging levels!</p>
-            </section>
-
-            <section class="content-section">
-                <h2>Superhero Transformation Guide</h2>
-                <p>Master each superhero form to dominate the race! The Speed Hero excels at quick navigation and can dash through narrow passages with lightning-fast reflexes. Use this form when you need to cover ground quickly or navigate through rapid obstacle sequences.</p>
-                <p>The Strength Hero is perfect for breaking through barriers and demolishing obstacles that would stop other heroes. Transform into this powerful form when facing walls, blocks, or any destructible barriers in your path.</p>
-                <p>The Flight Hero gives you the ultimate advantage over gaps, high obstacles, and elevated platforms. Use this transformation to soar over challenges that ground-based heroes cannot handle. Learning when to switch between these forms is the key to becoming a Hero Transform Race champion!</p>
-            </section>
-
-            <section class="content-section">
-                <h2>Tips for Victory</h2>
-                <p>Achieve superhero status with these expert strategies! Always look ahead to anticipate the next obstacle and prepare your transformation in advance. Quick reflexes are important, but strategic planning will take you further in the long run.</p>
-                <p>Practice switching between different hero forms smoothly to maintain your momentum. Hesitation can cost you valuable time and distance. Each hero form has specific strengths, so don't try to force one transformation to handle all situations.</p>
-                <p>Pay attention to the visual cues and obstacle patterns. Many challenges have telltale signs that indicate which hero form will be most effective. With practice, you'll develop an instinct for the perfect transformation timing that separates good players from true heroes!</p>
+                <h2>Why Choose Our Games?</h2>
+                <p><strong>Instant Play:</strong> No downloads, no installations, no waiting. Click and play immediately in your browser.</p>
+                <p><strong>Free Forever:</strong> All our games are completely free to play with no hidden costs or premium subscriptions required.</p>
+                <p><strong>Mobile Friendly:</strong> Every game is optimized to work perfectly on smartphones, tablets, and desktop computers.</p>
+                <p><strong>Safe & Secure:</strong> We only feature games from trusted sources that are safe for players of all ages.</p>
+                <p><strong>Regular Updates:</strong> New games are added regularly to keep our collection fresh and exciting.</p>
+                <p><strong>Quality Gaming:</strong> We handpick only the best games that offer engaging gameplay and smooth performance.</p>
             </section>
         </div>
     </main>
@@ -474,12 +552,96 @@
                     <a href="/contact">Contact Us</a>
                     <a href="/games">More Games</a>
                 </div>
-                <p>&copy; 2025 Have Fun Today. All rights reserved. Play Hero Transform Race and other amazing games online for free!</p>
+                <p>&copy; 2025 Have Fun Today. All rights reserved. Play amazing free online games!</p>
             </div>
         </div>
     </footer>
 
     <script>
+        // Game data with proper embed URLs
+        const games = {
+            'fireboy-watergirl': 'https://html5.gamedistribution.com/rvvASMiM/index.html',
+            'merge-brainrot': 'https://html5.gamedistribution.com/eb3379dccd9e4471b3871b6c4b4b1b9f/index.html',
+            'art-bloom': 'https://html5.gamedistribution.com/aeb12b8efa304b049e7b12fd94688cf2/index.html',
+            'metro-escape': 'https://html5.gamedistribution.com/a55c9cc5d6c54ac8ac95d6b9d0b7a5b6/index.html',
+            'penalty-shooters': 'https://html5.gamedistribution.com/cdf7c6de13aa4dda90e8be9e8c8b8e4e/index.html',
+            'bubble-shooter': 'https://html5.gamedistribution.com/9b2d5c8a9f8c4e6b8f2e3b5d6f8a9c1e/index.html',
+            'homerun-derby': 'https://html5.gamedistribution.com/f8e9d0c1b2a3f4e5d6c7b8a9f0e1d2c3/index.html',
+            'stickman-battle': 'https://html5.gamedistribution.com/b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9/index.html',
+            'snow-rider': 'https://html5.gamedistribution.com/e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7/index.html',
+            'dream-mania': 'https://html5.gamedistribution.com/c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3/index.html'
+        };
+
+        // Show game selection screen
+        function showGameSelection() {
+            // Hide all game containers
+            document.querySelectorAll('.game-container').forEach(container => {
+                container.classList.remove('active');
+            });
+            
+            // Show hero section and games grid
+            document.getElementById('home-section').style.display = 'block';
+            document.getElementById('games').style.display = 'grid';
+            document.getElementById('about').style.display = 'block';
+            document.getElementById('features').style.display = 'block';
+            
+            // Remove active class from all cards
+            document.querySelectorAll('.game-card').forEach(card => {
+                card.classList.remove('active');
+            });
+
+            // Update page title
+            document.title = 'Free Online Games Collection | Play Best Browser Games | Have Fun Today';
+        }
+
+        // Show specific game
+        function showGame(gameId) {
+            const gameContainer = document.getElementById(gameId);
+            const gameCard = document.querySelector(`[data-game="${gameId}"]`);
+            
+            if (gameContainer && gameCard) {
+                // Hide hero section and games grid
+                document.getElementById('home-section').style.display = 'none';
+                document.getElementById('games').style.display = 'none';
+                document.getElementById('about').style.display = 'none';
+                document.getElementById('features').style.display = 'none';
+                
+                // Hide all game containers
+                document.querySelectorAll('.game-container').forEach(container => {
+                    container.classList.remove('active');
+                });
+                
+                // Show selected game container
+                gameContainer.classList.add('active');
+                
+                // Add active class to selected card
+                document.querySelectorAll('.game-card').forEach(card => {
+                    card.classList.remove('active');
+                });
+                gameCard.classList.add('active');
+
+                // Update page title
+                const gameTitle = gameCard.querySelector('h3').textContent;
+                document.title = `${gameTitle} - Play Free Online | Have Fun Today`;
+
+                // Analytics tracking
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'game_start', {
+                        'game_name': gameId,
+                        'game_title': gameTitle
+                    });
+                }
+            }
+        }
+
+        // Add click event listeners to game cards
+        document.querySelectorAll('.game-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const gameId = this.getAttribute('data-game');
+                showGame(gameId);
+            });
+        });
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -494,18 +656,15 @@
             });
         });
 
-        // Add loading state for iframe
-        window.addEventListener('load', function() {
-            const iframe = document.querySelector('.game-iframe');
-            iframe.addEventListener('load', function() {
-                console.log('Hero Transform Race loaded successfully');
-            });
-        });
-
-        // Add keyboard navigation support
+        // Keyboard navigation support
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
-                // Allow users to exit fullscreen or return focus
+                // Return to game selection on Escape
+                if (document.querySelector('.game-container.active')) {
+                    showGameSelection();
+                }
+                
+                // Exit fullscreen if active
                 if (document.fullscreenElement) {
                     document.exitFullscreen();
                 }
@@ -513,11 +672,20 @@
         });
 
         // Game iframe error handling
-        const gameIframe = document.querySelector('.game-iframe');
-        gameIframe.addEventListener('error', function() {
-            console.log('Game loading failed, trying alternative source...');
-            // Fallback to alternative embed if primary fails
-            this.src = 'https://www.twoplayergames.org/embed/hero-transform-race';
+        document.querySelectorAll('.game-iframe').forEach(iframe => {
+            iframe.addEventListener('load', function() {
+                console.log('Game loaded successfully:', this.title);
+            });
+            
+            iframe.addEventListener('error', function() {
+                console.log('Game loading failed:', this.title);
+                // You could implement fallback logic here
+            });
+        });
+
+        // Initialize page
+        window.addEventListener('load', function() {
+            showGameSelection();
         });
     </script>
 </body>
